@@ -42,6 +42,12 @@ compiler = [
     "graphviz>=0.20",
 ]
 
+[project.scripts]
+cereal-box-styles = "cereal_box_styles.server:run_server"
+
+[project.entry-points."mcp"]
+cereal-box-styles = "cereal_box_styles.server:mcp"
+
 [project.urls]
 Homepage = "https://github.com/lushy/cereal-box-styles"
 Documentation = "https://github.com/lushy/cereal-box-styles#readme"
