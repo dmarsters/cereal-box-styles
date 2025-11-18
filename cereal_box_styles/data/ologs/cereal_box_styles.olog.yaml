@@ -1,0 +1,443 @@
+# Cereal Box Style Aesthetics - Olog
+# Categorical specification of how visual elements compose across 7 design categories
+#
+# This olog defines the structural relationships between semantic components
+# (subject types, action energies, settings, colors) and how they compose
+# into coherent visual categories.
+
+olog:
+  metadata:
+    name: "cereal-box-styles"
+    description: "Categorical structure of 7 distinct cereal box design aesthetics"
+    version: "1.0"
+    author: "Lushy"
+    domains: ["visual design", "brand identity", "commercial illustration", "product packaging"]
+
+  # ============================================================================
+  # TYPES (Semantic Categories)
+  # ============================================================================
+  
+  types:
+    Category:
+      description: "A distinct visual design philosophy for cereal box aesthetics"
+      instances: 
+        - "mascot_theater"
+        - "health_halo"
+        - "nostalgia_revival"
+        - "premium_disruptor"
+        - "kid_chaos"
+        - "transparent_honest"
+        - "adventure_fantasy"
+      properties: []  # Categories are indexing types
+    
+    SubjectType:
+      description: "The primary visual subject being depicted"
+      instances: ["human", "animal", "object", "food", "abstract"]
+      properties:
+        - treatment_philosophy: "string (how to conceptually approach this subject)"
+        - visual_simplification: "degree of abstraction"
+        - personality_attribution: "how much humanness to add"
+    
+    SubjectTreatment:
+      description: "How a subject type is transformed within a category"
+      instances:
+        # Mascot Theater
+        - "cartoon_mascot"
+        - "anthropomorphized"
+        - "personified"
+        # Health Halo
+        - "hands_only_or_silhouette"
+        - "naturalistic"
+        - "deconstructed_materials"
+        # Nostalgia Revival
+        - "vintage_illustration"
+        - "screen_print_accurate"
+        - "rotoscoped_photography"
+        # Premium Disruptor
+        - "luxury_minimalist"
+        - "shadow_silhouette"
+        - "product_hero"
+        # Kid Chaos
+        - "super_dynamic"
+        - "oversaturated"
+        - "impossible_perspective"
+        # Transparent Honest
+        - "clinical_documentation"
+        - "taxonomic_illustration"
+        - "exploded_view_diagram"
+        # Adventure Fantasy
+        - "epic_hero"
+        - "mythical_creature"
+        - "legendary_artifact"
+      properties:
+        - core_intent: "string (what does this treatment express about the subject?)"
+    
+    ActionEnergy:
+      description: "The dynamism or movement quality of the composition"
+      instances: ["low_energy", "medium_energy", "high_energy"]
+      properties:
+        - velocity: "low | medium | high"
+        - dynamism: "low | moderate | high"
+        - physical_exaggeration: "minimal | moderate | extreme"
+    
+    ActionVisualization:
+      description: "How action/motion is expressed in a category"
+      instances:
+        # Mascot Theater
+        - "friendly_gesture"
+        - "animated_motion"
+        - "dynamic_mid_action"
+        # Health Halo
+        - "contemplative_stillness"
+        - "controlled_movement"
+        - "peak_athletic_form"
+        # Nostalgia Revival
+        - "vintage_freeze_frame"
+        - "print_defined_moment"
+        - "energetic_period_accurate"
+        # Premium Disruptor
+        - "luxury_pause"
+        - "sophisticated_gesture"
+        - "power_moment"
+        # Kid Chaos
+        - "chaotic_energy"
+        - "impossible_motion"
+        - "reality_breaking_action"
+        # Transparent Honest
+        - "documented_process"
+        - "technique_demonstration"
+        - "physics_visualization"
+        # Adventure Fantasy
+        - "dramatic_stillness"
+        - "cinematic_motion"
+        - "epic_action"
+      properties:
+        - motion_blur_presence: "none | subtle | aggressive"
+        - effects_intensity: "none | moderate | extreme"
+        - physical_believability: "realistic | stylized | impossible"
+    
+    Setting:
+      description: "The environmental context of the composition"
+      instances: ["indoor", "outdoor", "abstract"]
+      properties:
+        - specificity: "detailed | generic | minimal"
+        - realistic_accuracy: "photorealistic | stylized | symbolic"
+    
+    SettingTreatment:
+      description: "How setting is rendered in a category"
+      instances:
+        # Mascot Theater
+        - "simplified_icons"
+        - "generic_simple"
+        - "radial_sunburst"
+        # Health Halo
+        - "natural_light_flooded"
+        - "golden_hour_natural"
+        - "gradient_minimal"
+        # Nostalgia Revival
+        - "period_authentic_scenery"
+        - "vintage_illustration_background"
+        - "magazine_page_context"
+        # Premium Disruptor
+        - "dark_negative_space"
+        - "luxury_void"
+        - "high_contrast_isolation"
+        # Kid Chaos
+        - "explosion_of_pattern"
+        - "layered_chaos"
+        - "impossible_geometry"
+        # Transparent Honest
+        - "grid_systematic"
+        - "botanical_garden_labels"
+        - "graph_paper_coordinate"
+        # Adventure Fantasy
+        - "fantasy_castle"
+        - "epic_vista"
+        - "cosmic_dimension"
+      properties:
+        - visual_density: "sparse | moderate | dense"
+        - clarity_priority: "subject focused | balanced | environmental"
+    
+    ColorPalette:
+      description: "The harmonic set of colors used in a category"
+      instances:
+        - "bright_primary_saturation"      # Mascot Theater
+        - "muted_natural_organic"          # Health Halo
+        - "limited_period_accurate"        # Nostalgia Revival
+        - "luxury_dark_metallic"           # Premium Disruptor
+        - "neon_maximum_saturation"        # Kid Chaos
+        - "clinical_functional_coding"     # Transparent Honest
+        - "dramatic_luminous_fantasy"      # Adventure Fantasy
+      properties:
+        - saturation_level: "low | moderate | high | maximum"
+        - warmth_temperature: "cool | neutral | warm | mixed"
+        - color_count: "number of primary colors used"
+        - gradient_presence: "none | subtle | pronounced"
+    
+    VisualStyle:
+      description: "The core aesthetic identity of a category"
+      instances:
+        - "cartoon_bright"
+        - "photography_natural"
+        - "illustration_vintage"
+        - "design_luxury"
+        - "illustration_exuberant"
+        - "technical_clinical"
+        - "cinematic_fantasy"
+      properties:
+        - illustration_vs_photography: "illustration | hybrid | photography"
+        - realism_spectrum: "cartoon | stylized | realistic | cinematic"
+        - commercial_intent: "playful | health | nostalgic | premium | chaotic | educational | epic"
+    
+    TypographicStyle:
+      description: "How letterforms appear in a category"
+      instances:
+        - "bubbly_rounded"           # Mascot Theater
+        - "clean_minimal"            # Health Halo
+        - "serif_period_accurate"    # Nostalgia Revival
+        - "minimal_sans_serif"       # Premium Disruptor
+        - "wild_expressive"          # Kid Chaos
+        - "technical_sans_serif"     # Transparent Honest
+        - "stylized_fantasy"         # Adventure Fantasy
+      properties:
+        - playfulness: "serious | moderate | playful | wild"
+        - readability: "high | moderate | low"
+        - decoration: "none | minimal | moderate | excessive"
+    
+    VisualEffect:
+      description: "Special effects and graphic embellishments"
+      instances:
+        - "motion_lines"
+        - "starbursts"
+        - "soft_focus"
+        - "shadow_effect"
+        - "particle_effects"
+        - "measurement_overlay"
+        - "magical_glow"
+      properties:
+        - purpose: "motion | energy | depth | atmosphere | information | magic"
+        - intensity: "subtle | moderate | prominent"
+        - realism_compatibility: "realistic | stylized | impossible"
+
+  # ============================================================================
+  # MORPHISMS (Structure-Preserving Transformations)
+  # ============================================================================
+  
+  morphisms:
+    # Category determines aesthetic dimensions
+    - source: "Category"
+      target: "SubjectType"
+      name: "category_accepts_subject"
+      description: "A category works with certain subject types"
+      deterministic: false  # Each category works with multiple subject types
+    
+    - source: "Category + SubjectType"
+      target: "SubjectTreatment"
+      name: "subject_to_treatment"
+      description: "Category and subject type together determine how to treat the subject"
+      deterministic: true
+    
+    - source: "Category + ActionEnergy"
+      target: "ActionVisualization"
+      name: "energy_to_visualization"
+      description: "Category transforms action energy into category-specific visualization"
+      deterministic: true
+    
+    - source: "Category"
+      target: "SettingTreatment"
+      name: "category_to_setting"
+      description: "Each category has characteristic ways of rendering settings"
+      deterministic: false  # Each category has 3 setting treatments (indoor/outdoor/abstract)
+    
+    - source: "Category"
+      target: "ColorPalette"
+      name: "category_to_colors"
+      description: "Each category has a characteristic color strategy"
+      deterministic: true
+    
+    - source: "Category"
+      target: "VisualStyle"
+      name: "category_to_style"
+      description: "Each category embodies a distinct visual style"
+      deterministic: true
+    
+    - source: "Category"
+      target: "TypographicStyle"
+      name: "category_to_typography"
+      description: "Each category has characteristic letterform treatment"
+      deterministic: true
+    
+    - source: "ActionVisualization"
+      target: "VisualEffect"
+      name: "action_generates_effects"
+      description: "How action is visualized determines what effects are used"
+      deterministic: false  # Multiple effects can serve the same action
+    
+    # Composition
+    - source: "SubjectTreatment + ActionVisualization + SettingTreatment + ColorPalette + TypographicStyle + VisualEffect"
+      target: "VisualStyle"
+      name: "all_dimensions_compose"
+      description: "All visual dimensions compose into coherent category style"
+      composition_type: "pullback"
+
+  # ============================================================================
+  # COMMUTATIVE DIAGRAMS (Coherence Constraints)
+  # ============================================================================
+  
+  commutative_diagrams:
+    category_coherence:
+      description: "All visual choices must derive from the same category aesthetic"
+      constraint_type: "equality"
+      paths:
+        - name: "path_via_subject_treatment"
+          steps: ["Category → SubjectType → SubjectTreatment"]
+        
+        - name: "path_via_action_energy"
+          steps: ["Category → ActionEnergy → ActionVisualization"]
+        
+        - name: "path_via_color"
+          steps: ["Category → ColorPalette"]
+        
+        - name: "path_via_typography"
+          steps: ["Category → TypographicStyle"]
+      
+      assertion: "All paths should express the same underlying category aesthetic"
+      violation: "Mixed aesthetics; parts of the image feel like they come from different categories"
+    
+    subject_treatment_consistency:
+      description: "How a subject is treated must match category philosophy"
+      constraint_type: "compatibility"
+      paths:
+        - name: "category_philosophy"
+          steps: ["Category → VisualStyle → (implied SubjectTreatment)"]
+        
+        - name: "actual_treatment"
+          steps: ["Category + SubjectType → SubjectTreatment"]
+      
+      assertion: "Treatment must align with category visual philosophy"
+      example: |
+        In mascot_theater, cartoon_mascot treatment is required.
+        In health_halo, hands_only_or_silhouette or naturalistic required.
+        Mixing these violates the constraint.
+    
+    color_saturation_consistency:
+      description: "Color saturation must match category strategy"
+      constraint_type: "alignment"
+      mapping: |
+        mascot_theater → maximum saturation (bright primaries)
+        health_halo → low-medium saturation (muted organics)
+        nostalgia_revival → period-accurate saturation (vintage limited palette)
+        premium_disruptor → selective saturation (dark with accent highlights)
+        kid_chaos → maximum saturation (neon explosion)
+        transparent_honest → functional saturation (color only for information)
+        adventure_fantasy → dramatic saturation (luminous high-key)
+    
+    typography_tone_alignment:
+      description: "Letterforms must match the tonal intent of the category"
+      constraint_type: "compatibility"
+      paths:
+        - name: "category_emotion"
+          steps: ["Category → (core intention)"]
+        
+        - name: "typography_emotion"
+          steps: ["TypographicStyle → (emotional tone)"]
+      
+      assertion: "Typography playfulness must match category intent"
+      violations:
+        - category: "premium_disruptor"
+          wrong_choice: "bubbly_rounded"
+          reason: "bubbly is joyful; premium requires sophistication"
+        
+        - category: "transparent_honest"
+          wrong_choice: "stylized_fantasy"
+          reason: "stylized hides information; honest requires clarity"
+    
+    effect_authenticity:
+      description: "Visual effects must be appropriate to category realism level"
+      constraint_type: "compatibility"
+      mapping: |
+        mascot_theater: effects must feel hand-drawn (motion_lines, starbursts)
+        health_halo: effects must feel photographic (soft_focus, subtle)
+        nostalgia_revival: effects must feel period-accurate (period-specific)
+        premium_disruptor: effects must feel designed (shadow_effect, minimal)
+        kid_chaos: effects must feel impossible (particle_effects, reality-breaking)
+        transparent_honest: effects must be informational (measurement_overlay)
+        adventure_fantasy: effects must feel magical (magical_glow, particle_effects)
+    
+    action_energy_expression:
+      description: "Action visualization must authentically express the energy level"
+      constraint_type: "authenticity"
+      paths:
+        - name: "intended_energy"
+          steps: ["ActionEnergy → (energy value)"]
+        
+        - name: "expressed_energy"
+          steps: ["ActionVisualization → (perceived energy in final image)"]
+      
+      assertion: "Expressed energy must match intended energy"
+      violation: "Energy misalignment; image feels sluggish when dynamic is intended, or chaotic when subtle is intended"
+
+  # ============================================================================
+  # NATURAL TRANSFORMATIONS (Composability with other domains)
+  # ============================================================================
+  
+  natural_transformations:
+    aesthetic_to_subject_properties:
+      description: "How category aesthetics transform subject-specific properties"
+      source_olog: "cereal-box-styles"
+      target_olog: "any domain with subject types"
+      
+      mapping_principle: |
+        Each category has consistent transformation rules for how subjects
+        are conceptualized. These rules can be applied to any domain:
+        
+        mascot_theater: → add personality and simplify anatomy
+        health_halo: → reveal authentic texture and craft
+        nostalgia_revival: → apply period-specific illustration approach
+        premium_disruptor: → isolate and elevate through shadow/light
+        kid_chaos: → exaggerate and make impossible
+        transparent_honest: → deconstruct and label systematically
+        adventure_fantasy: → mythologize and add magical resonance
+      
+      preservation_guarantee: |
+        The transformation preserves:
+        - Recognizability of the subject
+        - Intent of the original prompt
+        - Coherence within the category aesthetic
+    
+    color_strategy_transfer:
+      description: "How a category's color philosophy translates across domains"
+      source_olog: "cereal-box-styles"
+      target_olog: "domains with color choices"
+      
+      transferable_principles:
+        - "Saturation level as emotional intensity"
+        - "Color count as visual complexity"
+        - "Warmth/coolness as psychological tone"
+        - "Gradient presence as sophistication level"
+
+  # ============================================================================
+  # IMPLEMENTATION NOTES
+  # ============================================================================
+  
+  implementation_notes:
+    - "Each Category instance has exactly one VisualStyle, one ColorPalette, one TypographicStyle"
+    - "Each Category accepts multiple SubjectTypes, but transforms each consistently"
+    - "ActionEnergy applies universally; each Category transforms it distinctly"
+    - "SettingTreatment varies by Category AND Setting type (indoor/outdoor/abstract)"
+    - "Commutative diagrams ensure no category-internal contradictions"
+    - "Natural transformations allow composition with other aesthetic ologs"
+  
+  extension_points:
+    - "Add new Category instances (e.g., 'minimalist_elegance', 'maximalist_collage')"
+    - "Add new SubjectTreatment instances for existing categories"
+    - "Refine SettingTreatment descriptions as new settings are encountered"
+    - "Document new VisualEffect types as they are discovered"
+    - "Add new commutative diagrams as new coherence principles emerge"
+  
+  composition_readiness:
+    - "This olog composes with slapstick_comedy (both use exaggeration and energy)"
+    - "This olog composes with magazine_photography (both handle subject transformation)"
+    - "This olog composes with game_show_aesthetics (both use color and dynamic energy)"
+    - "To compose with another domain: identify shared categorical structure"
+    - "Map each domain's categories to the other's via natural transformations"
