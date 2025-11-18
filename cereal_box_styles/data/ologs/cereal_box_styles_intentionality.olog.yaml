@@ -1,0 +1,569 @@
+# Cereal Box Style Aesthetics - Intentionality Olog
+# Categorical specification of *why* each category works
+#
+# This olog specifies the sensory principles and aesthetic intentions
+# underlying each of the 7 cereal box design categories, plus the cross-category
+# principles that make them cohere as a system.
+
+olog:
+  metadata:
+    name: "cereal-box-styles-intentionality"
+    description: "Intentional structure underlying cereal box aesthetic categories"
+    version: "1.0"
+    parent_olog: "cereal-box-styles"
+    relationship: "parallel specification of why the categories work"
+
+  # ============================================================================
+  # CORE TYPES (Categories of Intentional Reasoning)
+  # ============================================================================
+  
+  types:
+    Category:
+      description: "A distinct visual design philosophy"
+      instances: 
+        - "mascot_theater"
+        - "health_halo"
+        - "nostalgia_revival"
+        - "premium_disruptor"
+        - "kid_chaos"
+        - "transparent_honest"
+        - "adventure_fantasy"
+    
+    CoreIntention:
+      description: "The fundamental aesthetic/commercial goal of a category"
+      instances:
+        - "playful_commercialism"        # Mascot Theater: joy through character
+        - "authentic_naturalism"         # Health Halo: trust through minimalism
+        - "nostalgic_authenticity"       # Nostalgia Revival: longing through accuracy
+        - "luxury_minimalism"            # Premium Disruptor: worth through restraint
+        - "chaotic_joy"                  # Kid Chaos: excitement through excess
+        - "transparent_honesty"          # Transparent Honest: trust through clarity
+        - "mythic_escapism"              # Adventure Fantasy: wonder through magic
+      properties:
+        - commercial_promise: "string describing what the brand claims to deliver"
+        - emotional_register: "playful | natural | nostalgic | luxurious | chaotic | clinical | magical"
+        - primary_audience_emotion: "what feeling should the viewer experience?"
+    
+    SensoryPrinciple:
+      description: "A coherence principle that must hold for a category to feel authentic"
+      instances:
+        - "subject_personality_coherence"     # How much the subject should be anthropomorphized
+        - "realism_authenticity_alignment"    # Is this trying to be realistic or stylized?
+        - "energy_expression_match"           # Does the energy level match the treatment?
+        - "color_saturation_emotional_match"  # Does color intensity match intent?
+        - "typography_tone_alignment"         # Do letters match the overall tone?
+        - "effect_authenticity"               # Are effects believable in this category?
+        - "setting_environmental_fit"         # Does environment support the intent?
+      properties:
+        - what_breaks_when_violated: "string"
+        - how_to_restore: "string"
+    
+    SubjectPersonality:
+      description: "How much human personality/anthropomorphization is appropriate"
+      instances:
+        - "maximally_personified"       # Mascot Theater: add personality aggressively
+        - "authentically_natural"       # Health Halo: minimize added personality
+        - "period_personified"          # Nostalgia Revival: period-specific personality
+        - "luxuriously_present"         # Premium Disruptor: refined presence
+        - "chaotically_alive"           # Kid Chaos: impossible personality
+        - "scientifically_objective"    # Transparent Honest: no personality projection
+        - "mythically_transcendent"     # Adventure Fantasy: enhance personality toward legend
+      properties:
+        - personality_addition_level: "minimal | moderate | high | extreme"
+        - authenticity_vs_construction: "authentic | constructed | impossible"
+    
+    RealismAuthenticity:
+      description: "The category's relationship to photorealism vs stylization"
+      instances:
+        - "cartoon_stylization"         # Mascot Theater
+        - "photographic_naturalism"     # Health Halo
+        - "illustrated_historicity"     # Nostalgia Revival
+        - "design_idealization"         # Premium Disruptor
+        - "exuberant_impossibility"     # Kid Chaos
+        - "technical_accuracy"          # Transparent Honest
+        - "cinematic_mythology"         # Adventure Fantasy
+      properties:
+        - realism_spectrum: "cartoon | stylized | realistic | cinematic"
+        - truth_claim: "what is this style claiming about truth/authenticity?"
+    
+    EnergyExpression:
+      description: "How kinetic energy is understood and expressed"
+      instances:
+        - "dynamic_exaggerated"         # Mascot Theater: motion lines, impact marks
+        - "subtle_controlled"           # Health Halo: minimal, intentional motion
+        - "period_accurate_motion"      # Nostalgia Revival: era-appropriate movement
+        - "refined_composed"            # Premium Disruptor: stillness as power
+        - "reality_breaking_chaos"      # Kid Chaos: impossible energy
+        - "systematic_documented"       # Transparent Honest: motion as data
+        - "cinematic_epic"              # Adventure Fantasy: mythic-scale movement
+      properties:
+        - motion_believability: "realistic | stylized | impossible"
+        - motion_emphasis: "minimal | moderate | maximal"
+    
+    ColorStrategy:
+      description: "The intentional use of color as communication"
+      instances:
+        - "maximum_saturation_joy"      # Mascot Theater: bright = happy
+        - "muted_authenticity"          # Health Halo: restraint = trust
+        - "limited_period_palette"      # Nostalgia Revival: historical accuracy
+        - "selective_luxury_accent"     # Premium Disruptor: dark with hints of gold
+        - "neon_sensory_overload"       # Kid Chaos: saturation = excitement
+        - "functional_information"      # Transparent Honest: color means something
+        - "luminous_magical"            # Adventure Fantasy: glow = magic
+      properties:
+        - saturation_as_meaning: "what does color intensity communicate?"
+        - color_constraint_philosophy: "string"
+    
+    TypographyTone:
+      description: "What the letterforms communicate about the brand"
+      instances:
+        - "approachable_playful"        # Mascot Theater
+        - "clean_trustworthy"           # Health Halo
+        - "nostalgic_accurate"          # Nostalgia Revival
+        - "refined_sophisticated"       # Premium Disruptor
+        - "expressive_uninhibited"      # Kid Chaos
+        - "technical_systematic"        # Transparent Honest
+        - "stylized_magical"            # Adventure Fantasy
+      properties:
+        - emotional_tone: "what does this typeface make you feel?"
+        - professionalism_level: "playful | balanced | serious | clinical"
+        - readability_vs_expression: "balance point"
+    
+    VisualEffect:
+      description: "The role of special effects in the category"
+      instances:
+        - "decorative_energy_markers"   # Mascot Theater: motion lines, starbursts
+        - "naturalistic_subtle"         # Health Halo: soft focus, minimal
+        - "period_stylistic"            # Nostalgia Revival: effects from the era
+        - "minimalist_refinement"       # Premium Disruptor: shadow, subtle
+        - "exuberant_impossible"        # Kid Chaos: reality-breaking effects
+        - "informational_systematic"    # Transparent Honest: measurement overlays
+        - "magical_atmospheric"         # Adventure Fantasy: glow, particles
+      properties:
+        - purpose: "what does this effect communicate?"
+        - realism_compatibility: "realistic | stylized | impossible"
+    
+    CompositionPrinciple:
+      description: "The binding principle that holds a category together"
+      instances:
+        - "joy_through_simplification"     # Mascot Theater
+        - "trust_through_restraint"        # Health Halo
+        - "comfort_through_recognition"    # Nostalgia Revival
+        - "worth_through_minimalism"       # Premium Disruptor
+        - "excitement_through_abundance"   # Kid Chaos
+        - "clarity_through_systematization" # Transparent Honest
+        - "wonder_through_mythologization" # Adventure Fantasy
+      properties:
+        - underlying_philosophical_claim: "string"
+        - why_it_works_commercially: "string"
+        - psychological_mechanism: "what makes this compelling?"
+
+  # ============================================================================
+  # MORPHISMS (How Intentions Relate)
+  # ============================================================================
+  
+  morphisms:
+    - source: "Category"
+      target: "CoreIntention"
+      name: "category_to_intention"
+      description: "Each category embodies a core aesthetic intention"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "SensoryPrinciple"
+      name: "intention_implies_principles"
+      description: "Core intention determines which sensory principles must hold"
+      deterministic: false  # One intention requires multiple principles
+    
+    - source: "CoreIntention"
+      target: "SubjectPersonality"
+      name: "intention_to_personality"
+      description: "Intent determines appropriate personality level"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "RealismAuthenticity"
+      name: "intention_to_realism"
+      description: "Intent determines how realistic the category should be"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "EnergyExpression"
+      name: "intention_to_energy"
+      description: "Intent determines how motion is expressed"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "ColorStrategy"
+      name: "intention_to_color"
+      description: "Intent determines color philosophy"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "TypographyTone"
+      name: "intention_to_typography"
+      description: "Intent determines how letterforms sound"
+      deterministic: true
+    
+    - source: "CoreIntention"
+      target: "VisualEffect"
+      name: "intention_to_effects"
+      description: "Intent determines appropriate special effects"
+      deterministic: true
+    
+    - source: "SubjectPersonality + RealismAuthenticity + EnergyExpression + ColorStrategy + TypographyTone + VisualEffect"
+      target: "CompositionPrinciple"
+      name: "all_dimensions_unify"
+      description: "All intentional dimensions compose into a binding principle"
+      composition_type: "pullback"
+
+  # ============================================================================
+  # COMMUTATIVE DIAGRAMS (Intentionality Coherence)
+  # ============================================================================
+  
+  commutative_diagrams:
+    intention_coherence:
+      description: "All intentional dimensions must ultimately express the same core intention"
+      constraint_type: "equality"
+      paths:
+        - name: "via_personality"
+          steps: ["Category → CoreIntention → SubjectPersonality"]
+        
+        - name: "via_realism"
+          steps: ["Category → CoreIntention → RealismAuthenticity"]
+        
+        - name: "via_energy"
+          steps: ["Category → CoreIntention → EnergyExpression"]
+        
+        - name: "via_color"
+          steps: ["Category → CoreIntention → ColorStrategy"]
+        
+        - name: "via_typography"
+          steps: ["Category → CoreIntention → TypographyTone"]
+      
+      assertion: "All paths should express the same underlying intention in different sensory modes"
+      violation: "Intentional incoherence; different parts feel like they come from different brands"
+    
+    principle_compatibility:
+      description: "Sensory principles within a category must be compatible"
+      constraint_type: "compatibility"
+      example: |
+        In mascot_theater:
+        - subject_personality_coherence (add personality)
+        - energy_expression_match (dynamic and exaggerated)
+        - color_saturation_emotional_match (bright = happy)
+        These all reinforce each other. Mixing with health_halo's
+        authenticity_alignment would create tension.
+    
+    composition_unification:
+      description: "All dimensions ultimately compose into one binding principle"
+      constraint_type: "closure"
+      assertion: |
+        The binding principle should explain why all six dimensions work together.
+        It should feel like a unified brand identity, not a collection of choices.
+
+  # ============================================================================
+  # CROSS-CATEGORY PRINCIPLES
+  # ============================================================================
+  # What unites all 7 categories as a coherent system?
+  
+  cross_category_principles:
+    - principle: "Subject Authenticity"
+      description: |
+        All categories are authentically committed to their own reality.
+        Mascot Theater is authentically playful (not pretending to be realistic).
+        Health Halo is authentically natural (not pretending to be artistic).
+        Each category owns its truth claim fully.
+    
+    - principle: "Commercial Clarity"
+      description: |
+        All categories communicate a clear commercial promise.
+        The viewer should understand within seconds what this product promises
+        and why it's different from other cereal boxes.
+    
+    - principle: "Sensory Coherence"
+      description: |
+        In every category, color + typography + effects + treatment
+        should feel designed to work together, not assembled randomly.
+    
+    - principle: "Audience Connection"
+      description: |
+        Each category reaches for a specific emotional connection with viewers.
+        The execution (subject, energy, color, effects) should reinforce that
+        emotional register consistently.
+
+  # ============================================================================
+  # INSTANCE DATA (Detailed Intentions for Each Category)
+  # ============================================================================
+  
+  instances:
+    "mascot_theater":
+      core_intention: "playful_commercialism"
+      subject_personality: "maximally_personified"
+      realism_authenticity: "cartoon_stylization"
+      energy_expression: "dynamic_exaggerated"
+      color_strategy: "maximum_saturation_joy"
+      typography_tone: "approachable_playful"
+      visual_effect: "decorative_energy_markers"
+      composition_principle: "joy_through_simplification"
+      
+      why_this_works: |
+        The mascot theater says: "This product is fun. Fun is straightforward—
+        bright colors, bouncy characters, simple shapes. We're not asking you
+        to think; we're asking you to feel joy."
+        
+        Every choice reinforces that message:
+        - Cartoon style: unambiguously playful, no pretense
+        - Oversized proportions: exaggerated, making fun of itself
+        - Bright primaries: innocent, childlike, direct
+        - Motion lines and starbursts: kinetic energy made visible
+        - Bubbly typography: can't be serious
+        
+        The genius is in the simplification. A realistic version would lose
+        the joy instantly. The stylization IS the promise.
+      
+      commercial_promise: "This cereal brings joy. It's for playful eaters."
+      ideal_subjects: ["animal", "food", "character"]
+      incompatible_subjects: []
+    
+    "health_halo":
+      core_intention: "authentic_naturalism"
+      subject_personality: "authentically_natural"
+      realism_authenticity: "photographic_naturalism"
+      energy_expression: "subtle_controlled"
+      color_strategy: "muted_authenticity"
+      typography_tone: "clean_trustworthy"
+      visual_effect: "naturalistic_subtle"
+      composition_principle: "trust_through_restraint"
+      
+      why_this_works: |
+        Health Halo says: "This is real. Real food, real hands, real care.
+        We're not hiding anything—look at the ingredients, the process,
+        the authentic materials."
+        
+        The aesthetic commits to photography, to natural light, to what
+        you can actually see and touch. The muted palette says: "We're
+        not trying to trick you with neon. We're showing you what's real."
+        
+        The typography is clean and modern—not playful (that would seem
+        dishonest), not fancy (that would seem pretentious). Just clear.
+        
+        Motion, when present, is subtle—controlled hands at work, not
+        dancing characters. The viewer should feel: "These people know
+        what they're doing. I can trust this."
+      
+      commercial_promise: "This is wholesome. It's made with integrity."
+      ideal_subjects: ["object", "human"]
+      incompatible_subjects: []
+    
+    "nostalgia_revival":
+      core_intention: "nostalgic_authenticity"
+      subject_personality: "period_personified"
+      realism_authenticity: "illustrated_historicity"
+      energy_expression: "period_accurate_motion"
+      color_strategy: "limited_period_palette"
+      typography_tone: "nostalgic_accurate"
+      visual_effect: "period_stylistic"
+      composition_principle: "comfort_through_recognition"
+      
+      why_this_works: |
+        Nostalgia Revival says: "Remember when? This is what you loved
+        about that era."
+        
+        The power here is archaeological—getting the colors, the illustration
+        style, the typography, the perspective all right. It's not mimicking
+        the era sloppily; it's recreating it with precision.
+        
+        The subject treatment respects the era's sensibilities. A 1970s
+        illustration wouldn't have the oversized proportions of modern mascot
+        theater. It wouldn't have photo-realistic health halo lighting.
+        
+        The limited color palette works because it's authentic to screen
+        printing or offset printing of that era. The effects (if any) are
+        period-accurate. Even the energy of movement feels period-specific.
+        
+        The typography isn't just retro-pastiche; it's actually from the era
+        (or a faithful recreation). The viewer should feel: "I recognize this.
+        This was real."
+      
+      commercial_promise: "Remember the comfort of [era]? We're bringing it back."
+      ideal_subjects: ["human", "animal", "object"]
+      incompatible_subjects: []
+    
+    "premium_disruptor":
+      core_intention: "luxury_minimalism"
+      subject_personality: "luxuriously_present"
+      realism_authenticity: "design_idealization"
+      energy_expression: "refined_composed"
+      color_strategy: "selective_luxury_accent"
+      typography_tone: "refined_sophisticated"
+      visual_effect: "minimalist_refinement"
+      composition_principle: "worth_through_minimalism"
+      
+      why_this_works: |
+        Premium Disruptor says: "You deserve better. Premium is not loud.
+        It's knowing what to remove."
+        
+        The visual strategy is aggressive minimalism. Dark backgrounds,
+        lots of empty space, the subject isolated and elevated. The subject
+        is lit in a way that feels like fine art photography—shadow side,
+        with subtle highlights that create presence.
+        
+        Color is almost completely absent except for selective accent
+        (gold, silver, a hint of jewel tone). The restraint communicates
+        luxury more effectively than ornamentation ever could.
+        
+        The typography is sans-serif, modern, but not trendy. It's timeless
+        refinement. Not playful, not nostalgic—just elegant.
+        
+        Effects are minimal: maybe a subtle shadow, maybe a refined edge light.
+        Nothing draws attention except the subject itself. The viewer should feel:
+        "This is curated. Someone with taste designed this. I want to be associated
+        with this."
+      
+      commercial_promise: "This is premium. It's designed for discerning people."
+      ideal_subjects: ["object", "human"]
+      incompatible_subjects: []
+    
+    "kid_chaos":
+      core_intention: "chaotic_joy"
+      subject_personality: "chaotically_alive"
+      realism_authenticity: "exuberant_impossibility"
+      energy_expression: "reality_breaking_chaos"
+      color_strategy: "neon_sensory_overload"
+      typography_tone: "expressive_uninhibited"
+      visual_effect: "exuberant_impossible"
+      composition_principle: "excitement_through_abundance"
+      
+      why_this_works: |
+        Kid Chaos says: "Too much is not enough. Excitement is sensory overload."
+        
+        This is the opposite of minimalism. Every part of the frame is active.
+        Patterns layer on patterns. Colors don't harmonize; they vibrate.
+        The subject is in impossible perspective, bent at impossible angles,
+        with hair/clothing flying impossibly.
+        
+        The energy is kinetic to the point of chaos. Not just dynamic—unhinged.
+        Motion lines don't just suggest movement; they create visual chaos.
+        Effects aren't subtle; they're explosive.
+        
+        The typography is wild and expressive—might be distorted, condensed,
+        tilted. Every letterform has personality and chaos. The colors are neon
+        saturation, hurting to look at in the best way.
+        
+        The viewer should feel: "This is overwhelming. And it's amazing."
+        The excess is the promise: "Your experience with this product will be
+        INTENSE."
+      
+      commercial_promise: "This is EXTREME. For kids who want everything LOUD."
+      ideal_subjects: ["human", "animal", "food"]
+      incompatible_subjects: []
+    
+    "transparent_honest":
+      core_intention: "transparent_honesty"
+      subject_personality: "scientifically_objective"
+      realism_authenticity: "technical_accuracy"
+      energy_expression: "systematic_documented"
+      color_strategy: "functional_information"
+      typography_tone: "technical_systematic"
+      visual_effect: "informational_systematic"
+      composition_principle: "clarity_through_systematization"
+      
+      why_this_works: |
+        Transparent Honest says: "We have nothing to hide. Here's exactly
+        what you're getting, labeled and documented."
+        
+        The visual strategy is clinical and informational. The background is
+        white (nothing hidden behind it). The subject is shown in exploded view,
+        or labeled, or documented step-by-step.
+        
+        Color is used only for function: blue for information, red for warning,
+        green for positive. No decorative color. The typography is technical
+        sans-serif—utterly clear, utterly readable.
+        
+        Effects aren't decorative; they're informational (measurement overlays,
+        labels, directional arrows). Every visual element serves clarity.
+        
+        The subject has no added personality (scientific objectivity). The energy
+        is documented and calm (this is a process, not a performance).
+        
+        The viewer should feel: "I understand what I'm buying. This brand
+        respects my intelligence enough to show me everything."
+      
+      commercial_promise: "We're honest. Here's exactly what you're getting."
+      ideal_subjects: ["object", "human", "animal"]
+      incompatible_subjects: []
+    
+    "adventure_fantasy":
+      core_intention: "mythic_escapism"
+      subject_personality: "mythically_transcendent"
+      realism_authenticity: "cinematic_mythology"
+      energy_expression: "cinematic_epic"
+      color_strategy: "luminous_magical"
+      typography_tone: "stylized_magical"
+      visual_effect: "magical_atmospheric"
+      composition_principle: "wonder_through_mythologization"
+      
+      why_this_works: |
+        Adventure Fantasy says: "Eating this is an adventure. You're entering
+        an epic story."
+        
+        Every visual choice serves myth-making. The subject is backlit, heroic,
+        positioned at a cliff edge or cosmic vista. The lighting is cinematic
+        and impossible—god rays, volumetric fog, colors that glow from within.
+        
+        The color palette is saturated and dramatic: deep blues and purples,
+        fiery oranges and golds, emerald greens with shimmer. Colors don't just
+        exist; they glow.
+        
+        The typography is stylized—might have a subtle glow or shadow, feels
+        magical and otherworldly. The subject is transformed into a legendary
+        version of itself (a person becomes a hero, an animal becomes a mythical
+        creature).
+        
+        Effects are magical: particle effects, magical auras, impossible physics.
+        The energy is epic and cinematic—slow-motion heroism or reality-bending
+        power.
+        
+        The viewer should feel: "This is not normal. This is an adventure.
+        This is worth being mythologized."
+      
+      commercial_promise: "This is an adventure. Make your breakfast epic."
+      ideal_subjects: ["human", "animal", "object"]
+      incompatible_subjects: []
+
+  # ============================================================================
+  # INHERITANCE AND EXTENSION
+  # ============================================================================
+  
+  inheritance_guidance:
+    for_builders_in_new_domains:
+      step_1_identify_intent: |
+        What is your domain trying to make people feel or believe?
+        Write it as a one-sentence core intention.
+        (e.g., "This cereal is fun" vs "This cereal is healthy")
+      
+      step_2_derive_principles: |
+        Given that core intention, what sensory principles must hold?
+        If the intent is "fun," then:
+        - Subject personality must be high (playful characters)
+        - Realism can be low (cartoons are fine)
+        - Color must be saturated (joy = bright)
+        - Energy must be exaggerated (fun = dynamic)
+      
+      step_3_design_coherently: |
+        Make sure every choice (subject, color, typography, effects)
+        reinforces the core intention. Don't mix intentions.
+      
+      step_4_document_binding_principle: |
+        What is the one idea that explains why all your choices work
+        together? That's your composition principle.
+    
+    cross_domain_composition:
+      - "Mascot Theater + Slapstick: both emphasize exaggerated personality"
+      - "Health Halo + Magazine Photography: both emphasize authenticity"
+      - "Nostalgia Revival + Cinema History: both emphasize era-specific accuracy"
+      - "Premium Disruptor + Luxury Architecture: both emphasize minimalism as status"
+      - "Kid Chaos + Acid House Music: both emphasize sensory overload as joy"
+      - "Transparent Honest + Data Visualization: both emphasize clarity as ethics"
+      - "Adventure Fantasy + Epic Cinema: both emphasize mythology as meaning-making"
