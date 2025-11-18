@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cereal-box-styles"
+version = "1.0.0"
+description = "Categorical specification of cereal box design aesthetics using ologs"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Lushy", email = "contact@lushy.ai"}
+]
+keywords = ["aesthetics", "design", "category-theory", "ologs", "mcp", "image-generation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+dependencies = [
+    "fastmcp>=0.1.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "ruff>=0.1.0",
+]
+compiler = [
+    "graphviz>=0.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/lushy/cereal-box-styles"
+Documentation = "https://github.com/lushy/cereal-box-styles#readme"
+Repository = "https://github.com/lushy/cereal-box-styles.git"
+Issues = "https://github.com/lushy/cereal-box-styles/issues"
+
+[tool.setuptools]
+packages = ["cereal_box_styles"]
+
+[tool.setuptools.package-data]
+cereal_box_styles = [
+    "data/ologs/*.yaml",
+    "data/legacy/*.json",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+select = ["E", "F", "W"]
+ignore = ["E501"]  # Line too long (handled by black)
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=cereal_box_styles --cov-report=html --cov-report=term-missing"
