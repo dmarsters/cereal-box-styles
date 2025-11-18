@@ -701,6 +701,11 @@ def get_category_intention(category: str) -> Dict:
     }
 
 
+def run_server():
+    """Entry point for FastMCP server."""
+    mcp.run()
+
+
 def main():
     """Run the MCP server."""
     mcp.run()
