@@ -251,7 +251,7 @@ MIT License - see LICENSE file for details
 
 ## Related Projects
 
-- **Lushy** - Full aesthetic systems platform
+- **Lushy.app** - Full aesthetic systems platform
 - **Slapstick Enhancer** - Categorical specification of slapstick comedy
 - **Game Show Aesthetics** - Categorical specification of game show design
 - **Magazine Photography** - Categorical specification of magazine aesthetics
@@ -261,4 +261,7 @@ MIT License - see LICENSE file for details
 
 For questions, issues, or contributions:
 - GitHub Issues: https://github.com/lushy/cereal-box-styles/issues
-- Email: contact@lushy.ai
+- Email: dal@lushy.app
+
+## Author
+Dal Marsters - Lushy.app
